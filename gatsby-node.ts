@@ -25,18 +25,18 @@ query {
 }
 `
 
-// type Repository {
-//     name: String,
-//     stargazerCount: Number
-// }
+type Repository = {
+    name: String,
+    stargazerCount: Number
+}
 
-// interface StargazerData {
-//     repositoryOwner: {
-//         repositories: {
-//             nodes: Array<{name: String, stargazerCount: Number}>
-//         }
-//     }
-// }
+interface StargazerData {
+    repositoryOwner: {
+        repositories: {
+            nodes: Array<{name: String, stargazerCount: Number}>
+        }
+    }
+}
 
 export const sourceNodes : GatsbyNode["sourceNodes"] = async ({ actions, createNodeId, createContentDigest }) => {
     const { createNode } = actions
