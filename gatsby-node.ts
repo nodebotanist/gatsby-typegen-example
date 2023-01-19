@@ -1,9 +1,5 @@
 import type { GatsbyNode } from "gatsby"
 import { GraphQLClient } from "graphql-request"
-import dotenv from "dotenv"
-
-// load .env file
-dotenv.config()
 
 const endpoint = `https://api.github.com/graphql`
 const graphqlClient = new GraphQLClient(endpoint, {
