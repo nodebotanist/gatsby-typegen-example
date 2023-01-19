@@ -22,14 +22,14 @@ query {
 `
 
 type Repository = {
-    name: String,
-    stargazerCount: Number
+    name: string,
+    stargazerCount: number
 }
 
 interface StargazerData {
     repositoryOwner: {
         repositories: {
-            nodes: Array<{name: String, stargazerCount: Number}>
+            nodes: Array<Repository>
         }
     }
 }
