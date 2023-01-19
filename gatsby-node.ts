@@ -38,7 +38,6 @@ export const sourceNodes : GatsbyNode["sourceNodes"] = async ({ actions, createN
     const { createNode } = actions
 
     const data = await graphqlClient.request<StargazerData>(query)
-    console.log(JSON.stringify(data, undefined, 2))
     data.repositoryOwner.repositories.nodes.forEach((repo: Repository) => {
         createNode({
             ...repo,
