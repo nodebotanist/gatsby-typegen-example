@@ -2,11 +2,6 @@ import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { graphql } from "gatsby"
 
-type Repository = {
-  name: String,
-  stargazerCount: Number
-}
-
 const IndexPage = ({data}: PageProps<Queries.AllRepositoryQuery>) => {
   return (
     <main>
