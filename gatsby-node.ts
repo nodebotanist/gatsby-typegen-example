@@ -8,7 +8,7 @@ const graphqlClient = new GraphQLClient(endpoint, {
     }
 })
 
-const query = /* GraphQL */`
+const query = `
 query {
     repositoryOwner (login:"gatsbyjs") { 
         repositories(first:25, orderBy:{ field:STARGAZERS, direction:DESC}) {
